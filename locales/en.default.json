@@ -19,13 +19,6 @@
       "admin_link_html": "Are you the store owner? <a href=\"\/admin\" class=\"link underlined-link\">Log in here<\/a>",
       "powered_by_shopify_html": "This shop will be powered by {{ shopify }}"
     },
-    "customer": {
-      "register": {
-        "signup_type": "Select your account type",
-        "customer": "Customer",
-        "provider": "Provider"
-      }
-    },
     "social": {
       "alt_text": {
         "share_on_facebook": "Share on Facebook",
@@ -494,6 +487,9 @@
       "success": "We've sent you an email with a link to update your password."
     },
     "register": {
+      "signup_type": "Select your account type",
+      "customer": "Customer",
+      "provider": "Provider",
       "title": "Create account",
       "first_name": "First name",
       "last_name": "Last name",
