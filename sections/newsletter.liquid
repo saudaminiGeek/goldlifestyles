@@ -88,6 +88,12 @@
                     {% render 'icon-arrow' %}
                   </button>
                 </div>
+                <small class="newsletter-form__message form__message newsletter-form__message--error" style="display:none;">
+                  <span id="Newsletter-error--{{ section.id }}"></span>
+                </small>
+                <h3 class="newsletter-form__message newsletter-form__message--success form__message" style="display:none;">
+                  {{ 'newsletter.success' | t }}
+                </h3>
                 {%- if form.errors -%}
                   <small class="newsletter-form__message form__message" id="Newsletter-error--{{ section.id }}">
                     {%- render 'icon-error' -%}
@@ -246,3 +252,37 @@
   ]
 }
 {% endschema %}
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const form = document.querySelector('.newsletter-form');
+    const emailInput = form.querySelector('input[type="email"]');
+    const successMessage = document.querySelector('.newsletter-form__message--success');
+    const errorMessage = document.querySelector('.newsletter-form__message--error');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const formData = new FormData(form);
+      const xhr = new XMLHttpRequest();
+      xhr.open('POST', '/contact');
+      xhr.setRequestHeader('Accept', 'application/json');
+
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4) {
+          if (xhr.status === 200) {
+            successMessage.style.display = 'block';
+            errorMessage.style.display = 'none';
+          } else {
+            successMessage.style.display = 'none';
+            errorMessage.style.display = 'block';
+            errorMessage.textContent = xhr.responseText;
+          }
+        }
+      };
+
+      xhr.send(formData);
+    });
+  });
+</script>
