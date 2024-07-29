@@ -253,31 +253,37 @@
 }
 {% endschema %}
 
-
 <script>
   document.addEventListener("DOMContentLoaded", function() {
     const form = document.querySelector('.newsletter-form');
+    if (!form) return; // Ensure form exists
+
     const emailInput = form.querySelector('input[type="email"]');
     const successMessage = document.querySelector('.newsletter-form__message--success');
     const errorMessage = document.querySelector('.newsletter-form__message--error');
 
     form.addEventListener('submit', function(event) {
-      event.preventDefault();
+      event.preventDefault(); // Prevent the form from submitting in the standard way
 
       const formData = new FormData(form);
       const xhr = new XMLHttpRequest();
-      xhr.open('POST', '/contact');
+      xhr.open('POST', '/contact', true); // Ensure the URL matches your endpoint
       xhr.setRequestHeader('Accept', 'application/json');
 
       xhr.onreadystatechange = function() {
-        if (xhr.readyState === 4) {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
           if (xhr.status === 200) {
-            successMessage.style.display = 'block';
-            errorMessage.style.display = 'none';
+            if (successMessage) {
+              successMessage.style.display = 'block';
+              successMessage.textContent = 'Thank you for subscribing!';
+            }
+            if (errorMessage) errorMessage.style.display = 'none';
           } else {
-            successMessage.style.display = 'none';
-            errorMessage.style.display = 'block';
-            errorMessage.textContent = xhr.responseText;
+            if (errorMessage) {
+              errorMessage.style.display = 'block';
+              errorMessage.textContent = xhr.responseText || 'There was an error. Please try again.';
+            }
+            if (successMessage) successMessage.style.display = 'none';
           }
         }
       };
