@@ -34,6 +34,9 @@
         </svg>
         {{ 'templates.contact.form.error_heading' | t }}
       </h2>
+
+     
+      
       <ul>
         {%- for field in form.errors -%}
           <li>
@@ -64,6 +67,13 @@
         {{ 'customer.register.first_name' | t }}
       </label>
     </div>
+    <div class="field">
+        <label>{{ 'customer.register.signup_type' | t }}</label>
+        <input type="radio" id="signupProvider" name="customer[signup_type]" value="provider">
+        <label for="signupProvider">{{ 'customer.register.provider' | t }}</label>
+        <input type="radio" id="signupCustomer" name="customer[signup_type]" value="customer" checked>
+        <label for="signupCustomer">{{ 'customer.register.customer' | t }}</label>
+      </div>
     <div class="field">
       <input
         type="text"
