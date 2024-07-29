@@ -9,6 +9,41 @@
 */
 {
   "sections": {
+    "image_banner_ekjBUi": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_DxYxzr": {
+          "type": "heading",
+          "settings": {
+            "heading": "Vibrant colors",
+            "heading_size": "h2"
+          }
+        },
+        "text_ynhQVX": {
+          "type": "text",
+          "settings": {
+            "text": "Will enhance the beauty of the room with different shades of colors",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_DxYxzr",
+        "text_ynhQVX"
+      ],
+      "settings": {
+        "image_overlay_opacity": 0,
+        "image_height": "small",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
     "main": {
       "type": "main-product",
       "blocks": {
@@ -98,6 +133,7 @@
     },
     "related-products": {
       "type": "related-products",
+      "disabled": true,
       "settings": {
         "heading": "Other Services",
         "heading_size": "h2",
@@ -116,6 +152,7 @@
     }
   },
   "order": [
+    "image_banner_ekjBUi",
     "main",
     "quick-order-list",
     "related-products"
