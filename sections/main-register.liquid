@@ -68,10 +68,13 @@
       </label>
     </div>
     <div class="field">
-        <label>{{ 'customer.register.signup_type' | t }}</label>
+        
+<div>
         <input type="radio" id="signupProvider" name="customer[signup_type]" value="provider">
-        <label for="signupProvider">{{ 'customer.register.provider' | t }}</label>
+</div>
+      <div>
         <input type="radio" id="signupCustomer" name="customer[signup_type]" value="customer" checked>
+      </div>
         <label for="signupCustomer">{{ 'customer.register.customer' | t }}</label>
       </div>
     <div class="field">
