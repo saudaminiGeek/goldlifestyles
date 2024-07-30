@@ -135,23 +135,11 @@
           "settings": {
             "text": "<p><\/p>{{ product.metafields.custom.specifications | metafield_tag }}"
           }
-        },
-        "button_AENENW": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
         }
       },
       "block_order": [
         "heading_aPdAfB",
-        "text_XL8kUg",
-        "button_AENENW"
+        "text_XL8kUg"
       ],
       "settings": {
         "desktop_content_position": "center",
