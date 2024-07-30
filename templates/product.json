@@ -104,7 +104,6 @@
     },
     "related-products": {
       "type": "related-products",
-      "disabled": true,
       "settings": {
         "heading": "Other Services",
         "heading_size": "h2",
@@ -134,7 +133,7 @@
         "text_XL8kUg": {
           "type": "text",
           "settings": {
-            "text": "<p><\/p><p>{{ product.metafields.custom.specifications | metafield_tag }}<\/p>"
+            "text": "<p><\/p>{{ product.metafields.custom.specifications | metafield_tag }}"
           }
         }
       },
@@ -150,12 +149,48 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "multicolumn_TePfPz": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_DBVxLQ": {
+          "type": "column",
+          "repeater": "{{ product.metafields.custom.furnitures.value }}",
+          "settings": {
+            "image": "{{ block.repeater.image.value }}",
+            "title": "{{ block.repeater.title.value }}",
+            "text": "{{ block.repeater.description | metafield_tag }}",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_DBVxLQ"
+      ],
+      "settings": {
+        "title": "Multicolumn",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "Button label",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "main",
     "quick-order-list",
     "related-products",
-    "rich_text_q6gJ8N"
+    "rich_text_q6gJ8N",
+    "multicolumn_TePfPz"
   ]
 }
