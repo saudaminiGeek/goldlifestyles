@@ -47,10 +47,11 @@
         },
         "collapsible-row-2": {
           "type": "collapsible_tab",
+          "repeater": "{{ product.metafields.custom.furnitures.value }}",
           "settings": {
-            "heading": "Merchandising tips",
+            "heading": "{{ block.repeater.title.value }}",
             "icon": "check_mark",
-            "content": "",
+            "content": "{{ block.repeater.description | metafield_tag }}",
             "page": "merchandising-tips"
           }
         },
