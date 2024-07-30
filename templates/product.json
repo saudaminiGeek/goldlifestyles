@@ -104,6 +104,7 @@
     },
     "related-products": {
       "type": "related-products",
+      "disabled": true,
       "settings": {
         "heading": "Other Services",
         "heading_size": "h2",
@@ -133,7 +134,7 @@
         "text_XL8kUg": {
           "type": "text",
           "settings": {
-            "text": "<p><\/p>{{ product.metafields.custom.specifications | metafield_tag }}"
+            "text": "<p><\/p><p>{{ product.metafields.custom.specifications | metafield_tag }}<\/p>"
           }
         }
       },
