@@ -34,6 +34,9 @@
         </svg>
         {{ 'templates.contact.form.error_heading' | t }}
       </h2>
+
+     
+      
       <ul>
         {%- for field in form.errors -%}
           <li>
@@ -49,6 +52,17 @@
         {%- endfor -%}
       </ul>
     {%- endif -%}
+    <div class="flex">
+      <div>
+        <input type="radio" id="signupCustomer" name="customer[signup_type]" value="customer" checked>
+        <label for="signupCustomer">Customer</label>
+      </div>
+      <div>
+        <input type="radio" id="signupProvider" name="customer[signup_type]" value="provider">
+        <label for="signupCustomer">Provider</label>
+      </div>
+    </div>
+    
     <div class="field">
       <input
         type="text"
@@ -64,6 +78,7 @@
         {{ 'customer.register.first_name' | t }}
       </label>
     </div>
+    
     <div class="field">
       <input
         type="text"
