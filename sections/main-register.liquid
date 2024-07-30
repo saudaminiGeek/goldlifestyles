@@ -78,7 +78,21 @@
         {{ 'customer.register.first_name' | t }}
       </label>
     </div>
-    
+     <div class="field">
+      <input
+        type="text"
+        name="customer[middle_name]"
+        id="RegisterForm-MiddleName"
+        {% if form.middle_name %}
+          value="{{ form.middle_name }}"
+        {% endif %}
+        autocomplete="family-name"
+        placeholder="{{ 'customer.register.middle_name' | t }}"
+      >
+      <label for="RegisterForm-LastName">
+        {{ 'customer.register.middle_name' | t }}
+      </label>
+    </div> 
     <div class="field">
       <input
         type="text"
