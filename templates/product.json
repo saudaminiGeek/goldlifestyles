@@ -32,7 +32,7 @@
           "settings": {
             "heading": "Product features",
             "icon": "star",
-            "content": "<p>Features<\/p>",
+            "content": "<p><\/p>{{ block.settings.page.metafields.custom.productfeatures | metafield_tag }}",
             "page": "product-features"
           }
         },
