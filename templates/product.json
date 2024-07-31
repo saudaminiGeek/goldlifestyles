@@ -32,7 +32,7 @@
           "settings": {
             "heading": "Product features",
             "icon": "star",
-            "content": "",
+            "content": "<ul><li>Battery Replacements<\/li><li>Battery warranty exchange<\/li><\/ul>",
             "page": "product-features"
           }
         },
