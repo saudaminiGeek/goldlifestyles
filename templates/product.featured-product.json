@@ -67,7 +67,7 @@
           "settings": {
             "heading": "Product features",
             "icon": "star",
-            "content": "",
+            "content": "<p>Features<br\/><\/p>{{ product.metafields.custom.features | metafield_tag }}",
             "page": "product-features"
           }
         },
