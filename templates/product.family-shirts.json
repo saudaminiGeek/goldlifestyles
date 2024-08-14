@@ -50,7 +50,7 @@
           "settings": {
             "heading": "Merchandising tips",
             "icon": "check_mark",
-            "content": "",
+            "content": "<p>{{ block.settings.page.title }}<\/p>",
             "page": "merchandising-tips"
           }
         },

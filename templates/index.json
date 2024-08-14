@@ -44,7 +44,6 @@
         "@media screen and (min-width: 990px) {.image-with-text__content {padding: 0; }}"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/vintage-shopping.jpg",
         "height": "small",
         "desktop_image_width": "small",
         "layout": "text_first",
@@ -68,6 +67,12 @@
             "collection": "battery-repair-services"
           }
         },
+        "featured_collection_ncXzWm": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
         "featured_collection2": {
           "type": "featured_collection",
           "settings": {
@@ -83,6 +88,7 @@
       },
       "block_order": [
         "featured_collection1",
+        "featured_collection_ncXzWm",
         "featured_collection2",
         "featured_collection3"
       ],
